@@ -1,4 +1,4 @@
-export const config = process.env.APP_API_KEY;
+export const config = "AIzaSyBaBvDHS5I6-5xLFzHt_c_LiT3zb8Vy75Q";
 
 export const businessInfo = `
 

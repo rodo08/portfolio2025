@@ -3,7 +3,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { config, businessInfo } from "./config.js";
 
-const apiKey = config;
+const apiKey = process.env.APP_API_KEY;
 
 const genAi = new GoogleGenerativeAI(apiKey);
 const model = genAi.getGenerativeModel({
