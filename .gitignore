@@ -1,0 +1,55 @@
+# Archivos y carpetas que se ignoran
+
+# Sistema de archivos
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración
+.env
+.config
+
+# Archivos de compilación y ejecución
+node_modules/
+build/
+dist/
+target/
+
+# Archivos de logs
+logs/
+.log
+
+# Archivos de depuración
+debug.log
+debug.txt
+
+# Archivos de IDEs
+.vscode/
+.idea/
+.netbeans/
+.eclipse/
+
+# Archivos de sistema
+System Volume Information/
+ehthumbs.db
+Desktop.ini
+
+# Archivos de paquetes
+package-lock.json
+yarn.lock
+
+# Archivos de documentación
+docs/
+doc/
+
+# Archivos de pruebas
+tests/
+test/
+
+# Archivos de temporales
+tmp/
+temp/
+
+
+
+webpack.config.js
+webpack.prod.js

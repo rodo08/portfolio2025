@@ -1,0 +1,26 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    span {
+      font-size: 2rem;
+      letter-spacing: normal;
+      margin: 0;
+    }
+
+    i {
+      color: rgb(255, 183, 0);
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      letter-spacing: normal;
+      line-height: normal;
+      color: white;
+      opacity: 0.5;
+      padding-bottom: 2rem;
+    }
+  }
+}

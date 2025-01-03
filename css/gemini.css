@@ -1,0 +1,197 @@
+.gemini {
+  position: relative;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  padding: 8% 2em 2em 2em;
+  margin: 0 auto;
+  @media (max-width: 1501px) {
+    width: 70%;
+  }
+  @media (max-width: 1219px) {
+    width: 80%;
+    padding-top: 10%;
+  }
+  @media (max-width: 994px) {
+    width: 90%;
+    padding-top: 14%;
+  }
+  @media (max-width: 794px) {
+    width: 100%;
+    padding-top: 16%;
+  }
+  @media (max-width: 714px) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .profile div {
+      display: flex;
+      width: 60%;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .chat-window {
+      width: 100%;
+      margin: 0 auto;
+
+      .chat {
+        height: 20rem;
+      }
+    }
+  }
+
+  @media (max-width: 714px) {
+    gap: 3rem;
+
+    .profile {
+      margin-top: 2.8rem;
+      div {
+        width: 90%;
+
+        h1 {
+          text-align: center;
+          padding-top: 26rem;
+        }
+        h2 {
+          text-align: center;
+        }
+      }
+    }
+
+    .tilt-card {
+      width: 25rem !important;
+      height: 25rem;
+    }
+
+    .home__socialicon {
+      scale: 1;
+    }
+  }
+}
+
+.year {
+  & h3 {
+    padding: 6rem 0 2.8rem;
+  }
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 1.2rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.chat {
+  height: 30.2rem;
+  overflow-y: auto;
+
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+.input-area {
+  display: flex;
+  gap: 1rem;
+
+  input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.6rem;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    &::placeholder {
+      color: rgb(149, 131, 110);
+      font-family: "Exo", sans-serif;
+    }
+  }
+
+  button {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
+    background-color: rgb(255, 183, 0);
+    font-size: 1.6rem;
+    font-family: "Exo", sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: white;
+      background-color: rgb(192, 106, 0);
+    }
+  }
+}
+
+.model {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: start;
+  border-radius: 20px;
+  color: aliceblue;
+}
+
+.user {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: end;
+  color: rgb(255, 183, 0);
+}
+
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  border: 5px solid #000000;
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 5px solid rgb(255, 183, 0);
+  animation: l18 2s infinite linear;
+}
+@keyframes l18 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
